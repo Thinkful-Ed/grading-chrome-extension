@@ -133,6 +133,7 @@ ${graderSignature}`;
       }
     }
   });
+};
 
 window.onload = function () {
   updateMessage('INITIAL');
