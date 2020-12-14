@@ -7,7 +7,7 @@
       {
         "matches": [
           "*://www.bloc.io/users*",
-          "https://rawgit.com/",  
+          "*://rhondacodes.github.io/sandbox/*",  
           "*://lark.thinkful.com/grading*"
         ],
         "js": ["grading-msg.js"]

@@ -134,23 +134,6 @@ ${graderSignature}`;
     }
   });
 
-  // rawgit.com url magic
-  if (window.location.href.indexOf('rawgit') > -1) {
-    const urlProdInput = document.querySelector('#url-prod');
-
-    const urlPasted = document.querySelector('#url');
-
-    const changeURL = function () {
-      document.location.href = urlProdInput.value;
-    };
-
-    urlPasted.addEventListener('input', function () {
-      // needed to use setTimeout because the prodURL does not populate right away
-      setTimeout(changeURL, 200);
-    });
-  }
-};
-
 window.onload = function () {
   updateMessage('INITIAL');
 };
