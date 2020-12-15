@@ -29,15 +29,6 @@ const updateMessage = (type) => {
   chrome.storage.sync.get(null, (data) => {
     const graderName = data.graderName || '';
     const gradingProgram = data.gradingProgram;
-
-    const feedbackQuestionText = 'If it’s a question about the feedback, feel free to resubmit' +
-      ' with a question and the grading team will get back to you as quickly as possible.';
-    const wantToLearnMoreText = '\n\nWant to learn more? Check out our group sessions & QA' +
-      ' resources page http://bit.ly/gs-g-home with hours of recorded video and live sessions.';
-
-    const isBlocWebsite = window.location.href.includes('bloc');
-    const isThinkfulWebsite = window.location.href.includes('thinkful');
-
     const graderSignature = `\n\nThanks,\n ${graderName && `__${graderName}__`}`;
 
     // Tabs here matters as its translated into HTML space.
@@ -73,21 +64,6 @@ ${graderSignature}`;
 
       return customIntro ? `${customIntro}\n\n` : `Hi ${studentName}! ${graderName && `${graderName} from the grading team here.`}`;
     };
-
-    if (isBlocWebsite) {
-      // get textzarea
-      const submissionTextarea = document.getElementById('comment-box');
-
-      if (submissionTextarea) {
-        // Find the clean up the student's first name
-        const studentNameContainer = document.getElementsByClassName('mentor-review-header');
-        const studentNameSentence = studentNameContainer[0].innerText.split(' ');
-        const studentName = capitalizeFirstLetter(studentNameSentence[2]);
-
-        // set value of text area with student name
-        submissionTextarea.value = getProgramMessage(studentName);
-      }
-    } else if (isThinkfulWebsite) {
       // get textzarea
       const submissionTextarea = document.getElementById('content');
 
@@ -108,7 +84,6 @@ ${graderSignature}`;
 
         // Populate the text area with the relevant message
         submissionTextarea.value = getProgramMessage(studentName);
-      }
     }
   });
 };
