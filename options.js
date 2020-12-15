@@ -60,6 +60,16 @@ function saveIntroMessage() {
   });
 }
 
+function renderProgramButtons(){
+  const gradingProgramWapper = document.getElementById('grading-program-wrapper');
+  gradingProgramWapper.innerHTML = programs.map(program => renderProgramButton(program)).join("");
+}
+
+function renderProgramButton(program){
+  return `<button type="button" id="${program.id}" class="grading-program">${program.name}</button>`;
+}
+
+renderProgramButtons();
 saveIntroMessage();
 populateUserData();
 saveGraderData();
