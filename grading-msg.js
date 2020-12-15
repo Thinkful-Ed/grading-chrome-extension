@@ -52,33 +52,11 @@ ${graderSignature}`;
 
     const getProgramMessage = studentName => {
       let message = '';
-      switch (gradingProgram) {
-        case 'design-track':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to reach out for technical assistance via Slack: https://www.bloc.io/resources/getting-unstuck. ${feedbackQuestionText} ${wantToLearnMoreText}`
-          break;
-        case 'product-design-flex':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to reach out for technical assistance via Slack in the #product-design channel: https://thinkful.slack.com/messages/product-design/. ${feedbackQuestionText}`
-          break;
-        case 'web-development-track':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to reach out for technical assistance via Slack: https://www.bloc.io/resources/getting-unstuck. ${feedbackQuestionText} ${wantToLearnMoreText}`
-          break;
-        case 'software-development-track':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to reach out for technical assistance via Slack: https://www.bloc.io/resources/getting-unstuck. ${feedbackQuestionText} ${wantToLearnMoreText}`
-          break;
-        case 'engineering-flex':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to reach out for technical assistance. You can also join our scheduled Front End office hours: https://www.thinkful.com/open-sessions/qa-sessions/frontend/ If it’s a question about the feedback, feel free to resubmit with a question.\n${feedbackQuestionText}`
-          break;
-        case 'ei-nw':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to join an Q&A session for technical assistance via Slack: https://www.thinkful.com/open-sessions/qa-sessions/. \n${feedbackQuestionText}`
-          break;
-        case 'data-analytics':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to reach out for technical assistance via Slack in the #data-analytics channel: https://thinkful.slack.com/messages/data-analytics You can also join our scheduled Data Analytics office hours: https://www.thinkful.com/open-sessions/qa-sessions/data%20analytics/. \n${feedbackQuestionText}`
-          break;
-        case 'data-science':
-          message = `If anything here that I’ve mentioned is unclear, please don’t hesitate to reach out for technical assistance via Slack in the #data-science channel: https://thinkful.slack.com/messages/data-science You can also join our scheduled Data Analytics office hours: https://www.thinkful.com/open-sessions/qa-sessions/data%20science/. \n${feedbackQuestionText}`
-          break;
+      const selectedProgram = programs.find(program => program.id === gradingProgram);
+      if (selectedProgram){
+        message = selectedProgram.hasThinkChat ? messages.thinkChat : messages.standard;
       }
-
+      
       return (
         message
         ? createMessage(message, studentName)

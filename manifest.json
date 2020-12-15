@@ -10,7 +10,7 @@
           "*://rhondacodes.github.io/sandbox/*",  
           "*://lark.thinkful.com/grading*"
         ],
-        "js": ["grading-msg.js"]
+        "js": ["programs.js","grading-msg.js"]
       }
     ],
   "permissions": ["storage", "tabs"],
