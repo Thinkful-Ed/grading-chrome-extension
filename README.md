@@ -27,3 +27,6 @@ icon.
 - Changing the program while grading will automatically re-populate the text field, this is 
 useful to avoid refreshing the page, but be careful as it will override anything you wrote before.
 - You can also customize the intro message from the default to your own.
+
+### Admin
+- Programs and messages can be maintained in programs.js
