@@ -7,7 +7,7 @@
       {
         "matches": [
           "*://www.bloc.io/users*",
-          "*://rhondacodes.github.io/sandbox/*",  
+          "*://thinkful-ed.github.io/grading-extension-sandbox/*",
           "*://lark.thinkful.com/grading*"
         ],
         "js": ["programs.js","grading-msg.js"]
