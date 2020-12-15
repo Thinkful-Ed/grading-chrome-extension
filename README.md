@@ -30,3 +30,4 @@ useful to avoid refreshing the page, but be careful as it will override anything
 
 ### Admin
 - Programs and messages can be maintained in programs.js
+- Testing sandbox at https://thinkful-ed.github.io/grading-extension-sandbox/
