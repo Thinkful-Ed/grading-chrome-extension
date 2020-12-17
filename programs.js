@@ -26,7 +26,7 @@ const programs = [
     },
     {
         id: "product-design-flex",
-        name: "Product Design Flex",
+        name: "Product Design",
         hasThinkChat: true
     },
     {
