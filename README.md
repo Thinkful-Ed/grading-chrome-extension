@@ -18,7 +18,7 @@ Chrome extension for graders to auto fill with a grading signature and greeting
 icon.
 
 ### Usage
-<img src="https://thinkful-ed.github.io/grading-extension-sandbox/options.png" alt="drawing" width="200"/>
+<img src="https://thinkful-ed.github.io/grading-extension-sandbox/options.png" alt="drawing" width="200"  style="border:2px solid red"/>
 
 - Open the options by clicking on the chrome extension icon.
 - Enter your name and the program you're grading.
