@@ -18,10 +18,10 @@ Chrome extension for graders to auto fill with a grading signature and greeting
 icon.
 
 ### Usage
+<img src="https://thinkful-ed.github.io/grading-extension-sandbox/options.png" alt="drawing" width="200"/>
 
 - Open the options by clicking on the chrome extension icon.
 - Enter your name and the program you're grading.
-![extension options](https://t.gyazo.com/teams/leovegas/7753d89a481ac07be48a342f8d060219.png)
 - Go to any submission that you've claimed from the grading queue and the snippet will be added
  on page load. It will automatically adapt to the program you selected.
 - Changing the program while grading will automatically re-populate the text field, this is 
