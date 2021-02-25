@@ -1,5 +1,10 @@
 const programs = [
     {
+        id: "careers",
+        name: "Careers",
+        hasThinkChat: false
+    },
+    {
         id: "product-management",
         name: "Product Management",
         hasThinkChat: false
